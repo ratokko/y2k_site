@@ -1,0 +1,196 @@
+body {
+    background: linear-gradient(135deg, #ffffff, #000000, #ffff00);
+    background-size: 400% 400%;
+    width: 85%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ff00ff;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00ffff;
+}
+
+.site-title {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5em;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: glow 2s infinite alternate;
+    margin: 0;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff00ff; }
+    to { text-shadow: 0 0 20px #00ffff, 0 0 30px #ffff00; }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+/* ---------- ПРОСТОЙ СЛАЙДЕР ---------- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 30px auto;
+    border: 5px solid #ffff00;
+    border-radius: 15px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+/* ---------- КОНЕЦ СЛАЙДЕРА ---------- */
+
+.text_about, .contact-form {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 80%;
+    border: 2px solid #00ffff;
+    text-align: center;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.column {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.column:hover {
+    transform: scale(1.05);
+    border-color: #ff00ff;
+}
+
+.column img.pic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ff00ff;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+}
+
+button {
+    background: #ff00ff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #00ffff;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    text-align: center;
+    border-top: 3px solid #ffff00;
+    margin-top: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: rotate(15deg) scale(1.2);
+}
